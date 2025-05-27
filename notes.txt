@@ -1,0 +1,16 @@
+Kubernetes -
+
+Kubernetes is a container orchestration tool developed by Google. And it is open source.
+
+Two Things - Scaling & Fault Tolerance
+
+* Horizontal Scalability (Basically Load Balancing)-
+If the application recieving 10000 request per day and if it's growing we can automatically scale our application that ability is already us already available with the tool such as HPA(Horizontal Pod Autoscaler).
+
+* Fault Tolerance - 
+If we are running a container if its goes down for whatever reason it will come back or rescheduled or reprovisioned
+
+* It also offers application deployment in release strategies like how you gonna release application whether you want to do rolling updates/ zero runtime environments/ blue print deployments
+
+* Rolling update -
+In Kubernetes is a deployment strategy that updates an application to a new version with minimal downtime.
