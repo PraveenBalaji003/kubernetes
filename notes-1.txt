@@ -1,0 +1,70 @@
+🖥️ Server:
+A server is a computer it provides services or resources to other computers (called clients) over a network.
+
+It can be:
+A physical machine (like a real desktop in a data center)
+Or a virtual machine (like AWS EC2 or VirtualBox)
+
+🔹 Common Types of Servers:
+Server Type	Purpose
+Web Server	Hosts websites (e.g., Apache, Nginx)
+Database Server	Stores and manages data (e.g., Postgres)
+App Server	Runs backend logic (e.g., Spring Boot)
+
+
+🖥️ Node
+A Node is just a server.
+
+
+🧩 Cluster
+A Cluster is a group of nodes (servers).
+
+
+🐳 Docker (Single Server):
+Docker is a container platform that lets you package and run apps in containers.
+You can run everything — frontend, backend, database — on a single machine, like your local system or a standalone server.
+
+Example:
+Run all containers on one RHEL server using Docker or Docker Compose.
+
+
+☸️ Kubernetes (Multiple Servers):
+Kubernetes is a container orchestration system that helps you run and manage containers across multiple servers (called nodes).
+It handles deployment, scaling, load balancing, and failures automatically.
+
+Example with OpenShift:
+When you deploy an app (pod), OpenShift chooses a worker node to run it — you don’t need to care where it runs.
+
+📦 Cluster Scenario (OpenShift):
+Node Name	Type	Role
+master-node-1	Control	Manages the cluster (API, scheduler)
+worker-node-1	Worker	Runs your app containers (pods)
+worker-node-2	Worker	Also runs app containers
+
+✅ These nodes together form a cluster, acting as one system to run your applications.
+
+
+
+🧠 Control Plane (Kubernetes/OpenShift)
+The Control Plane is the brain of the cluster.
+It manages all the nodes and turns them into a single system.
+You interact with one API endpoint, and it handles everything — whether you have 4 servers or 4000.
+
+
+🧱 Namespaces in Kubernetes:
+In real-world environments, you'll have multiple projects, applications, and environments (like dev, stage, prod).
+To keep things separated and organized, Kubernetes lets you partition a cluster using Namespaces.
+
+🔹 Why Use Namespaces?
+To separate projects/stacks within the same cluster
+
+To control access, set quotas, and apply network rules
+
+To give each team/project their own space
+
+🔸 How It Works:
+You create a namespace for each project or team
+
+Inside each namespace, you only see the pods, services, and resources for that project
+
+
